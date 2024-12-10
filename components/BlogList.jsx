@@ -1,9 +1,20 @@
 import { blog_data } from "@/assets/assets";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BlogItem from "./BlogItem";
+import axios from "axios";
 
 const BlogList = () => {
   const [menu, setMenu] = useState("All");
+  const [blogs, setBlogs] = useState([]);
+
+  const fetchBlogs = async () => {
+    const res = await axios.get("/api/blog");
+    setBlogs(res.data.blogs);
+    console.log(res.data.blogs);
+  }
+  useEffect(() => {
+    fetchBlogs();
+  },[])
   return (
     <div>
       <div className="flex justify-center gap-6 my-10">
@@ -49,13 +60,13 @@ const BlogList = () => {
         </button>
       </div>
       <div className="flex flex-wrap justify-around gap-1 gap-y-10 mb-16 xl:mx-24">
-        {blog_data
+        {blogs
           .filter((blog) => (menu === "All" ? true : blog.category === menu))
           .map((blog, index) => {
             return (
               <BlogItem
                 key={index}
-                id={blog.id}
+                id={blog._id}
                 image={blog.image}
                 title={blog.description}
                 category={blog.category}

@@ -4,17 +4,15 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const page = ({ params }) => {
   const [data, setData] = useState(null);
-  const fetchData = () => {
-    for (let i = 0; i < blog_data.length; i++) {
-      if (Number(params.id) === blog_data[i].id) {
-        setData(blog_data[i]);
-        console.log(blog_data[i]);
-        break;
-      }
-    }
+  const fetchData = async () => {
+    const res = await axios.get('/api/blog/',{params:{
+      id: params.id
+    }});
+    setData(res.data);
   };
   useEffect(() => {
     fetchData();
@@ -41,7 +39,7 @@ const page = ({ params }) => {
           </h1>
           <Image
             className="mx-auto mt-6 border border-white rounded-full"
-            src={data.author_img}
+            src={data.authorImg}
             alt=""
             width={60}
             height={60}
