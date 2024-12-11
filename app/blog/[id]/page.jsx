@@ -57,87 +57,11 @@ const page = ({ params }) => {
           width={1280}
           height={720}
         />
-        <h1 className="my-8 text-[26px] font-semibold ">Introduction</h1>
-        <p>{data.description}</p>
-        <h3 className="my-5 text-[18px] font-semibold">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus eaque
-          dolores et officiis totam adipisci neque voluptates! Debitis maiores,
-          quasi reiciendis repellendus recusandae, quaerat sed veritatis, quas
-          cupiditate ducimus incidunt!
-        </h3>
-        <p className="my-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptates
-          cum delectus, odit sit assumenda accusantium possimus dolore
-          doloremque quibusdam est facilis explicabo aliquam, voluptate porro
-          veritatis eligendi distinctio quidem!
-        </p>
-        <p className="my-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptates
-          cum delectus, odit sit assumenda accusantium possimus dolore
-          doloremque quibusdam est facilis explicabo aliquam, voluptate porro
-          veritatis eligendi distinctio quidem!
-        </p>
-        <h3 className="my-5 text-[18px] font-semibold">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus eaque
-          dolores et officiis totam adipisci neque voluptates! Debitis maiores,
-          quasi reiciendis repellendus recusandae, quaerat sed veritatis, quas
-          cupiditate ducimus incidunt!
-        </h3>
-        <p className="my-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptates
-          cum delectus, odit sit assumenda accusantium possimus dolore
-          doloremque quibusdam est facilis explicabo aliquam, voluptate porro
-          veritatis eligendi distinctio quidem!
-        </p>
-        <p className="my-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptates
-          cum delectus, odit sit assumenda accusantium possimus dolore
-          doloremque quibusdam est facilis explicabo aliquam, voluptate porro
-          veritatis eligendi distinctio quidem!
-        </p>
-        <h3 className="my-5 text-[18px] font-semibold">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus eaque
-          dolores et officiis totam adipisci neque voluptates! Debitis maiores,
-          quasi reiciendis repellendus recusandae, quaerat sed veritatis, quas
-          cupiditate ducimus incidunt!
-        </h3>
-        <p className="my-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptates
-          cum delectus, odit sit assumenda accusantium possimus dolore
-          doloremque quibusdam est facilis explicabo aliquam, voluptate porro
-          veritatis eligendi distinctio quidem!
-        </p>
-        <p className="my-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptates
-          cum delectus, odit sit assumenda accusantium possimus dolore
-          doloremque quibusdam est facilis explicabo aliquam, voluptate porro
-          veritatis eligendi distinctio quidem!
-        </p>
-        <h3 className="my-5 text-[18px] font-semibold">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus eaque
-          dolores et officiis totam adipisci neque voluptates! Debitis maiores,
-          quasi reiciendis repellendus recusandae, quaerat sed veritatis, quas
-          cupiditate ducimus incidunt!
-        </h3>
-        <p className="my-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptates
-          cum delectus, odit sit assumenda accusantium possimus dolore
-          doloremque quibusdam est facilis explicabo aliquam, voluptate porro
-          veritatis eligendi distinctio quidem!
-        </p>
-        <p className="my-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptates
-          cum delectus, odit sit assumenda accusantium possimus dolore
-          doloremque quibusdam est facilis explicabo aliquam, voluptate porro
-          veritatis eligendi distinctio quidem!
-        </p>
-        <h3 className="my-5 text-[18px] font-semibold">Conclusion</h3>
-        <p className="my-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptates
-          cum delectus, odit sit assumenda accusantium possimus dolore
-          doloremque quibusdam est facilis explicabo aliquam, voluptate porro
-          veritatis eligendi distinctio quidem!
-        </p>
+       
+        <div className="blog-content" dangerouslySetInnerHTML={{__html:data.description}}>
+
+        </div>
+        
         <div className="my-24">
           <p className="text-black font-semibold my-4">
             Share this article on Social Media
