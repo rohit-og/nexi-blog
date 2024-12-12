@@ -5,7 +5,7 @@ import React, {useState, useEffect } from 'react'
 import { toast } from 'react-toastify';
 
 
-export default function page = () => {
+export default function page  () => {
 
   const [blogs, setBlogs] = useState([]);
   const fetchBlogs = async () => {
