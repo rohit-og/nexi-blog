@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { assets } from '@/assets/assets'
 import axios from 'axios'
 import { toast } from 'react-toastify'
-const page = () => {
+export default function page = () => {
     const [image, setImage] = useState(false)
     const [data, setData] = useState({
         title: "",
@@ -68,5 +68,3 @@ const page = () => {
     </>
   )
 }
-
-export default page
