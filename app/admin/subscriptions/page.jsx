@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
 
-export default function page = () => {
+export default function page () => {
   const [emails, setEmail] = useState([]);
 
   const fetchEmails = async () => {
