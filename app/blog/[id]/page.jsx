@@ -6,12 +6,14 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const page = ({ params }) => {
+export default function page({ params }) {
   const [data, setData] = useState(null);
   const fetchData = async () => {
-    const res = await axios.get('/api/blog/',{params:{
-      id: params.id
-    }});
+    const res = await axios.get("/api/blog/", {
+      params: {
+        id: params.id,
+      },
+    });
     setData(res.data);
   };
   useEffect(() => {
@@ -57,11 +59,12 @@ const page = ({ params }) => {
           width={1280}
           height={720}
         />
-       
-        <div className="blog-content" dangerouslySetInnerHTML={{__html:data.description}}>
 
-        </div>
-        
+        <div
+          className="blog-content"
+          dangerouslySetInnerHTML={{ __html: data.description }}
+        ></div>
+
         <div className="my-24">
           <p className="text-black font-semibold my-4">
             Share this article on Social Media
@@ -78,6 +81,4 @@ const page = ({ params }) => {
   ) : (
     <></>
   );
-};
-
-export default page;
+}
